@@ -54,11 +54,13 @@ struct Test
 
 void print(const Box<Test> & test)
 {
+    // there is no need to check for nullptr
     cout << test->i << " " << test->d << " " << test->s << endl;
 }
 
 void twice(Box<Test> test)
 {
+    // there is no need to check for nullptr
     test->i *= 2;
     test->d *= 2;
     test->s += test->s;
