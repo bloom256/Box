@@ -66,6 +66,13 @@ void twice(Box<Test> test)
     test->s += test->s;
 }
 
+/*
+stdout:
+Test ctor
+42 3.14 hello
+84 6.28 hellohello
+Test dtor
+*/
 int main()
 {
     Box<Test> test = Box<Test>::create(42, 3.14, "hello");
